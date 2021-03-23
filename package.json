@@ -8,6 +8,13 @@
     "build": "webpack"
   },
   "author": "cereme(Sang yun Pae)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cereme/react-use-iamport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cereme/react-use-iamport/issues"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.10",
