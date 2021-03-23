@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 var path = require('path');
+const DtsBundleWebpack = require('dts-bundle-webpack');
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -23,4 +24,12 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
   },
+  plugins: [
+    new DtsBundleWebpack({
+      name: 'react-use-iamport',
+      main: './src/index.d.ts',
+      out: path.resolve(__dirname, 'dist/index.d.ts'),
+      removeSource: true,
+    }),
+  ],
 };
