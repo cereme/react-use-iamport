@@ -2,9 +2,10 @@
   "name": "react-use-iamport",
   "version": "1.0.0",
   "description": "Use iamport with react hooks",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "cereme(Sang yun Pae)",
   "license": "ISC",
@@ -23,7 +24,8 @@
     "react-dom": "^17.0.2",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
-    "webpack": "^5.27.2"
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0"
   },
   "dependencies": {
     "react": "^17.0.2"

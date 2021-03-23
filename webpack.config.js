@@ -1,36 +1,26 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 var path = require('path');
-var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'eval',
-
-  entry: {
-    demo: ['webpack/hot/dev-server', './demo/index.jsx'],
-  },
-
+  context: path.join(__dirname, 'src'),
+  entry: './index.ts',
+  mode: 'production',
   module: {
     rules: [
       {
-        test: /\.jsx$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'ts-loader',
         },
       },
     ],
   },
-
-  output: {
-    filename: 'demo/bundle.js',
-  },
-
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.js'],
   },
-
-  plugins: [new webpack.HotModuleReplacementPlugin()],
-
-  devServer: {
-    contentBase: './demo',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
   },
 };
