@@ -1,5 +1,7 @@
 # react-use-iamport
 
+![npm version](https://img.shields.io/npm/v/react-use-iamport)
+
 ## Install
 
 ```
